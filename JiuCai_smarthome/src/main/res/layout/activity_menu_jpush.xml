@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/door_lock_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="智能门锁消息推送"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/door_lock_cb"
+            style="@style/MySwitchTheme"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray"
+    />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/smart_cat_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="智能猫眼门铃消息推送"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/smart_cat_cb"
+            style="@style/MySwitchTheme"
+            android:layout_width="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:checked="true" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray"
+    />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/smart_cat_arlam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="智能猫眼警报消息推送"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/smart_arlam_cb"
+            style="@style/MySwitchTheme"
+            android:layout_width="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

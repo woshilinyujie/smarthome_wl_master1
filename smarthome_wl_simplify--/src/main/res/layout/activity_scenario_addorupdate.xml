@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_scenario_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dimgrey"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="场景图标"/>
+
+        <ImageView
+            android:id="@+id/iv_scene"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:maxLines="1"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/pictures_no"
+            />
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e4e4e4"
+        android:layout_below="@id/layout_scenario_image"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_scenario_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="16dp" android:layout_below="@+id/layout_scenario_image"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dimgrey"
+            android:textSize="16sp"
+            android:text="模式名称"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:hint="请输入场景名"
+            android:background="@null"
+        />
+        <TextView
+            android:id="@+id/sencename_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:visibility="gone"
+        />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e4e4e4"
+        android:layout_below="@id/layout_scenario_name"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_den"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:layout_below="@+id/layout_scenario_name"
+        android:layout_alignParentStart="true">
+
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_protection"/>
+
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_device"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="安防联动"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_device"
+            android:layout_below="@id/tv_device_name"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="可联动防区进行布撤防操作"
+            android:layout_marginLeft="8dp" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_down" />
+
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_arrow"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:button="@drawable/ios7_btn"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:id="@+id/switch1"/>
+
+        <TextView
+            android:id="@+id/tv_instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/switch1"
+            android:layout_marginRight="16dp"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_delaytime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_den"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_centerVertical="true"
+            android:text="延时操作"/>
+
+
+        <ImageView
+            android:id="@+id/iv_arrow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_up"
+            android:visibility="invisible"/>
+
+
+
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@drawable/ios7_btn"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:id="@+id/switch2"
+            android:layout_below="@+id/tv_delaytime"
+            android:layout_toStartOf="@+id/iv_arrow02"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:id="@+id/tv_delaytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/switch2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <View
+        android:id="@+id/line02"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e4e4e4"
+        android:layout_below="@id/layout_delaytime"/>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/line02"/>
+
+
+</RelativeLayout>

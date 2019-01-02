@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_scena_manager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+    <LinearLayout
+        android:id="@+id/rl_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+    >
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/no_data"
+        />
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_nodata"
+            android:textSize="14sp"
+            android:textColor="#CDCDCD"
+            android:text="空空如也..请添加区域哦.."
+        />
+
+    </LinearLayout>
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+
+</LinearLayout>

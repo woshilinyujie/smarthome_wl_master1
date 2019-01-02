@@ -1,0 +1,2 @@
+include ':threepartieslibrary', ':threepartieslibrary:swipetoloadlayoutlibrary', ':threepartieslibrary:anychat', ':smarthome_wl_videolock', ':threepartieslibrary:libvlc', ':EZOpenSDK'
+include ':perLuanchActivity', ':smarthome_wl'

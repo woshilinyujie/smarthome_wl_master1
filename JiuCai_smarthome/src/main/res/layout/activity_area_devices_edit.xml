@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_group_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+        <TextView
+            android:text="区域图标"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:id="@+id/iv_group"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:maxLines="1"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/pictures_no"
+            />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e4e4e4"
+       />
+
+    <RelativeLayout
+        android:id="@+id/liner_modify_areaname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:text="编辑名称"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <com.fbee.smarthome_wl.view.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="已选设备"
+                android:textColor="@color/dimgrey"
+                android:background="@color/window_bg"
+                android:gravity="center"
+                android:textSize="16sp"
+
+            />
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/chose_devices_deleterecycl_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/yixuan_null_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="暂无已选设备"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:visibility="gone"
+            />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="可选设备"
+                android:textColor="@color/dimgrey"
+                android:background="@color/window_bg"
+                android:gravity="center"
+                android:textSize="16sp"
+            />
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/chose_devices_addrecycler_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/kexuan_null_text"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="暂无可选设备"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:visibility="gone"
+            />
+        </LinearLayout>
+
+    </com.fbee.smarthome_wl.view.MyScrollview>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/title_bar" />
+    <LinearLayout
+        android:id="@+id/liner_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_search_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机正在搜索设备"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/dms"
+            />
+        <LinearLayout
+            android:id="@+id/liner_search_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:text="请确保设备处于配网模式"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:drawableLeft="@mipmap/right_blue_login"
+                android:layout_gravity="center_horizontal"
+                android:text=" 手机正在搜索设备"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/liner_net_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:drawableLeft="@mipmap/right_blue_login"
+                android:layout_gravity="center_horizontal"
+                android:text=" 手机发送WIFI密码"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="手机连接服务器\n    手机等待设备上线"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

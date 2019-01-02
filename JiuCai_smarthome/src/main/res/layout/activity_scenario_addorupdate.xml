@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_scenario_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dimgrey"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:text="场景图标"/>
+
+        <ImageView
+            android:id="@+id/iv_scene"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:maxLines="1"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/pictures_no"
+            />
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e4e4e4"
+        android:layout_below="@id/layout_scenario_image"/>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_scenario_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="16dp" android:layout_below="@+id/layout_scenario_image"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dimgrey"
+            android:textSize="16sp"
+            android:text="模式名称"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:hint="请输入场景名"
+            android:background="@null"
+        />
+        <TextView
+            android:id="@+id/sencename_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:textSize="16sp"
+            android:visibility="gone"
+        />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e4e4e4"
+        android:layout_below="@id/layout_scenario_name"/>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/line"/>
+
+
+
+</RelativeLayout>

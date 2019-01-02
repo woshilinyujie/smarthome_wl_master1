@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_setDevName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名称"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_devName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:clickable="false"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备型号"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_devType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智能人体侦测"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <CheckBox
+                    android:id="@+id/check_devHuman_detection"
+                    style="@style/MySwitchTheme"
+                    android:layout_width="60dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智能人体侦测报警"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <CheckBox
+                    android:id="@+id/check_devHuman_detection_arlm"
+                    style="@style/MySwitchTheme"
+                    android:layout_width="60dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                     />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_arlmTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智能人体侦测自动报警时间"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_dev_arlmTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_arlmtype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智能人体侦测报警类型"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_arlmtype"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_infrared_sense"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智能人体侦测灵敏度"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/linear_infrared_sense"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_auth_mode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁验证模式"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_auth_mode"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_voicelevel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁音量等级"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_voicelevel"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁密码验证功能"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <CheckBox
+                    android:id="@+id/check_passValidate"
+                    style="@style/MySwitchTheme"
+                    android:layout_width="60dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁常联网模式"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <CheckBox
+                    android:id="@+id/check_network_modle"
+                    style="@style/MySwitchTheme"
+                    android:layout_width="60dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门未关报警"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <CheckBox
+                    android:id="@+id/check_dev_notClose_arlm"
+                    style="@style/MySwitchTheme"
+                    android:layout_width="60dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="假锁报警"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <CheckBox
+                    android:id="@+id/check_dev_false_arlm"
+                    style="@style/MySwitchTheme"
+                    android:layout_width="60dp"
+                    android:layout_gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                     />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="远程控制功能"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_dev_telecontrol"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_update"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁版本信及升级"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁串码信息"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_strcode_info"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁MAC地址"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_dev_mac"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门锁WIFI SSID"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_dev_ssid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_videolock_restartDevice"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:background="@color/white"
+                android:layout_marginTop="20dp"
+                android:text="远程重启设备"
+                android:textColor="#ff0000"
+                android:textSize="18dp" />
+            <Button
+                android:id="@+id/btn_dev_delete"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:text="删除设备"
+                android:textColor="#ff0000"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

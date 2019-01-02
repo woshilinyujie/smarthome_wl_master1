@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fbee.smarthome_wl">
+
+    <permission
+        android:name="com.fbee.smarthome_wl.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+
+    <uses-permission android:name="com.fbee.smarthome_wl.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Optional for location -->
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- Required -->
+
+
+    <!-- 华为添加的，定制读写权限 -->
+    <uses-permission android:name="android.permission.WIRTE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.intent.action.USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <!-- 以上是极光推送添加的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logol"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/main_activity_theme">
+        <receiver android:name=".reciver.DownLoadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.fbee.smarthome_wl.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.corecode.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.scenario.ScenarioEditActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.doorlock.DoorLockActivity" />
+        <activity
+            android:name=".ui.doorlocklog.DoorLockLogActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- glide -->
+        <meta-data
+            android:name="com.fbee.smarthome_wl.glide.OkHttpGlideModule"
+            android:value="GlideModule" />
+
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="583638a18630f53b6d0005d3" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="feibit_smarthome" />
+
+        <!-- 极光 -->
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle" />
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.fbee.smarthome_wl" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+
+
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.fbee.smarthome_wl" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".ui.jpush.JpushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.fbee.smarthome_wl" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required 显示通知栏 -->
+                <category android:name="com.fbee.smarthome_wl" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+
+            <!-- Optional -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- Required . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="6c0ee8d16139dfc5a0ec4660" />
+
+        <!-- 请填写你自己的- appKey -->
+        <meta-data
+            android:name="com.alibaba.app.appkey"
+            android:value="24784202" />
+        <!-- 请填写你自己的appSecret -->
+        <meta-data
+            android:name="com.alibaba.app.appsecret"
+            android:value="fe16591061bcf0ea948f1d7dd0293ed0" />
+
+
+        <activity android:name=".ui.equesdevice.adddevices.AddDeviceActivity" />
+        <activity android:name=".ui.equesdevice.EquesDeviceInfoActivity" />
+        <activity android:name=".ui.homedeviceedit.HomeEditActivity" />
+        <activity
+            android:name=".ui.equesdevice.alarmlist.EquesAlarmActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.equesdevice.settinglist.EquesSettingListActivity" />
+        <activity
+            android:name=".ui.equesdevice.videocall.EquesCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.accountinformation.PersonAccountInfoActivity" />
+        <activity android:name=".ui.usermanage.UserManageActivity" />
+        <activity android:name=".ui.equesdevice.alarmlist.alarm.alarmbitmap.EquesBitmapActivity" />
+        <activity android:name=".ui.equesdevice.visitorlist.EquesVisitorActivity" />
+        <activity android:name=".ui.equesdevice.settinglist.settingalarmtime.EquesAlarmTimeActivity" />
+        <activity android:name=".ui.equesdevice.flashshotlist.EquesFlashShotActivity" />
+        <activity android:name=".ui.equesdevice.flashshotlist.sdpicture.SDpictureActivity" />
+        <activity android:name=".ui.choseareaorsensces.AddAreaActicity" />
+        <activity android:name=".ui.choseareaorsensces.ItemAreaActivity" />
+        <activity android:name=".ui.scenario.AddDevicetoScenarioActivity" />
+        <activity
+            android:name=".widget.dialog.AlamDialogActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/dialog_translucent" />
+        <activity android:name=".ui.equesdevice.videocall.EquesVideoCallActivity" />
+        <activity
+            android:name=".utils.DialogActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MyDialogStyle" />
+        <activity android:name=".ui.scenario.ScenaManagerActivity" />
+        <activity android:name=".ui.areamanager.AreaManagerActivity" />
+        <activity android:name=".ui.areamanager.AreaDevicesEditActivity" />
+        <activity android:name=".ui.jpush.MenuJpushActivity" />
+        <activity android:name=".ui.forgetpassword.ForgetPassWordActivity" />
+        <activity android:name=".ui.modifypassword.ModifyPasswordActivity" />
+        <activity android:name=".ui.subuser.SubUserListActivity" />
+        <activity android:name=".ui.subuser.SubUserInfoActivity" />
+        <activity android:name=".ui.devicemanager.DeviceManagerActivity" />
+        <activity android:name=".ui.gateway.GatewayListActicity" />
+        <activity android:name=".ui.subuser.AddSubUserActivity" />
+        <activity android:name=".ui.aboutinfo.AboutInfoActivity" />
+
+        <service android:name=".service.LocationService" />
+
+        <activity android:name=".ui.plan.AddPlanActivity" />
+        <activity android:name=".ui.usermanage.DeviceAssociateUserActivity" />
+        <activity android:name=".ui.plan.PlanListActivity" />
+        <activity android:name=".ui.plan.PlanDetailActivity" />
+        <activity
+            android:name=".ui.equesdevice.equesaddlock.EquesAddlockActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.personaccount.ModifyPersonAccountActivity" />
+        <activity android:name=".ui.rule.AddRuleActivity" />
+        <activity android:name=".ui.rule.ChooseActivity" />
+        <activity android:name=".ui.rule.RuleListActivity" />
+        <activity android:name=".ui.rule.RuleDetailActivity" />
+        <activity android:name=".ui.corecode.AddGatewayActivity" />
+        <activity android:name=".ui.subuser.SubUserGateManagerActivity" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/activity_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.webview.WebViewActivity" />
+        <activity android:name=".ui.subuser.ModifySubUserInfo" />
+        <activity android:name=".ui.chooseImage.ChooseImageActivity" />
+        <activity android:name=".ui.devicemanager.DoorLockInfoActivity" />
+        <activity android:name=".ui.gateway.GateWayQrcodeActivity" />
+        <activity android:name=".ui.webview.MyWebViewActivity" />
+        <activity android:name=".ui.zone.AddZoneActivity" />
+        <activity android:name=".ui.devicemanager.BindSenceActivity" />
+        <activity android:name=".ui.devicemanager.BindDeviceActivity"></activity>
+
+        <service
+            android:name="com.alibaba.sdk.android.push.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+                <category android:name="taobao" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.alibaba.sdk.android.push.MsgService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.NOTIFY_ACTION" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.alibaba.sdk.android.push.channel.TaobaoRecvService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.fbee.smarthome_wl.reciver.MyALiYunMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.push2.action.NOTIFICATION_REMOVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.taobao.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.alibaba.sdk.android.push.RECEIVE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

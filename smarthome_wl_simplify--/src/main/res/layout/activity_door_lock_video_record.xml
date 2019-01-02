@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/relative_open_door_record"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/item_selector">
+
+        <ImageView
+            android:id="@+id/image_open_door_record"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/binding_lock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/image_open_door_record"
+            android:text="开锁记录" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+    <RelativeLayout
+        android:id="@+id/relative_operate_door_record"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/item_selector">
+
+        <ImageView
+            android:id="@+id/image_operate_door_record"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/eques_visitor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/image_operate_door_record"
+            android:text="操作记录" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/relative_visitor_door_record"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/item_selector">
+
+        <ImageView
+            android:id="@+id/image_visitor_door_record"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/wechat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/image_visitor_door_record"
+            android:text="访客记录" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+</LinearLayout>

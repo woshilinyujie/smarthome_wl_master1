@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">anychat</string>
+	<string name="string_no_name">未命名</string>
+	<string name="device_offline">設備不線上</string>
+	<string name="device_busy">設備端忙</string>
+	<string name="back">返回</string>
+	<string name="ok">外面</string>
+	<string name="cancle">取消</string>
+	<string name="str_calling">連接成功正在等待使用者回應</string>
+	<string name="remind">提示</string>
+	<string name="str_call">連接</string>
+	<string name="ready_connect_string">準備連接設備號為︰</string>
+	<string name="ihome_device">的設備</string>
+	<string name="str_againlogin">帳號在異處登錄請重新登錄</string>
+	<string name="str_servercolse">當前業務伺服器關閉請稍後登錄</string>
+	<string name="str_networkcheck">當前網路連接有異常請檢查網路</string>
+	<string name="str_exitresume">是否想要退出這個帳號？</string>
+	<string name="str_endsession">是否想要結束當前通話</string>
+	<string name="str_returncode_timeout">連接逾時</string>
+	<string name="str_returncode_bussiness">使用者正在連接中設備正忙</string>
+	<string name="str_returncode_offline">使用者不線上</string>
+	<string name="str_returncode_requestcancel">使用者取消呼叫</string>
+	<string name="str_returncode_requestrefuse">無法建立通話對方網路不穩定</string>
+	<string name="str_returncode_disconnect">對方網路異常</string>
+	<string name="sessioning_reqite">請求與您通話 ！</string>
+
+</resources>

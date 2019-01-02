@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+        <LinearLayout
+            android:id="@+id/liner_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_add"
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_height="100dp"
+                android:src="@mipmap/no_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#CDCDCD"
+                android:textSize="14sp"
+                android:text="空空如也..请添加设备哦.." />
+
+
+        </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:id="@+id/swipeToLoadLayout">
+            <GridView
+                android:id="@+id/gd_devices"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="90dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

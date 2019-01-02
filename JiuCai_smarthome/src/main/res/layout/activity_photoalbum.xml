@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/relativeone"
+        layout="@layout/title_bar" />
+
+    <ListView
+        android:id="@+id/album_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeone" />
+
+    <LinearLayout
+        android:id="@+id/botoomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#aaaaaa"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/allChose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="全选"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="删除"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_videocall"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/frame_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_eques_call"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+
+            <SurfaceView
+                android:id="@+id/surface_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <LinearLayout
+                android:id="@+id/right_linear_eques_call"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                android:visibility="gone"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:id="@+id/break_icon_eques_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/image_fullscreen_mute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/fullscreen_mute" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/iv_speak"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/image_fullscreen_voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/full_screen_voice" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/iv_screen_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/full_screen_shot_press" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/iv_hangupCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/fullscreen_off_selector" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_call_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.6"
+                android:background="#e0000000"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/call_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="00:00:00"
+                    android:textColor="@color/google_red" />
+
+                <ImageView
+                    android:id="@+id/iv_full_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/full_screen" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/is_jihuo_layout_liner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/is_jihuo_quxiao_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="取消"
+            android:textColor="@color/text_notify"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/is_jihuo_doorlock_icon"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tv_device_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/doorlock_icon" />
+
+        <TextView
+            android:id="@+id/is_jihuo_doorlock_text_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/is_jihuo_doorlock_icon"
+            android:layout_centerHorizontal="true"
+            android:text="门锁未激活"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/speak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/is_jihuo_doorlock_text_state"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_bg_selector"
+            android:text="按住说话" />
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="门锁"
+            android:textColor="@color/text_notify"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/doorlock_layout_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/quxiao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="取消"
+                android:textColor="@color/text_notify"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="请选择将要打开的门锁"
+                android:textColor="@color/text_notify"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/doorlock_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="auto_fit"
+            android:paddingTop="10dp"
+            android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/btn_speak_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/voice_selector"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/tv_speak1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按住说话" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_function"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/linear_CaptureDefault"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_hangupCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:src="@mipmap/eques_hangup" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="挂断" />
+
+            <ImageView
+                android:id="@+id/tv_screen_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@mipmap/eques_photograph" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_speak"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/voice_selector"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/tv_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按住说话" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btn_mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@mipmap/eques_mute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="静音" />
+
+            <ImageView
+                android:id="@+id/doorlock_imageicon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@mipmap/eques_unlocking" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开锁" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

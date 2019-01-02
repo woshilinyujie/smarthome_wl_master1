@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tv_plan_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07:18"
+        android:textSize="18sp"
+        android:textColor="@color/login_edit"/>
+
+
+    <TextView
+        android:id="@+id/tv_plan_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_plan_time"
+        android:layout_marginTop="8dp"
+        android:text="周一"/>
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/arrow_right"/>
+    <TextView
+        android:id="@+id/tv_perform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/iv_arrow"
+        android:text="执行动作"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From PerLuanchActivity:
+* SmartHome.iml
+* ic_launcher-web.png
+* obj\
+* obj\local\
+* obj\local\armeabi\
+* obj\local\armeabi\objs\
+* obj\local\armeabi\objs\zllcmd\
+* obj\local\armeabi\objs\zllcmd\IRDataConvert.o.d
+* obj\local\armeabi\objs\zllcmd\buffer.o.d
+* obj\local\armeabi\objs\zllcmd\fbBox.o.d
+* obj\local\armeabi\objs\zllcmd\interface_devicelist.o.d
+* obj\local\armeabi\objs\zllcmd\interface_grouplist.o.d
+* obj\local\armeabi\objs\zllcmd\interface_scenelist.o.d
+* obj\local\armeabi\objs\zllcmd\interface_timer.o.d
+* obj\local\armeabi\objs\zllcmd\zllcmd.o.d
+* proguard-project.txt
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
+From library:
+* LICENSE
+* pom.xml
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In library:
+* AndroidManifest.xml => library\src\main\AndroidManifest.xml
+* assets\ => library\src\main\assets
+* res\ => library\src\main\res\
+* src\ => library\src\main\java\
+In PerLuanchActivity:
+* AndroidManifest.xml => perLuanchActivity\src\main\AndroidManifest.xml
+* assets\ => perLuanchActivity\src\main\assets\
+* libs\achartengine-1.1.0.jar => perLuanchActivity\libs\achartengine-1.1.0.jar
+* libs\arm64-v8a\libicvss.so => perLuanchActivity\src\main\jniLibs\arm64-v8a\libicvss.so
+* libs\arm64-v8a\libjpush219.so => perLuanchActivity\src\main\jniLibs\arm64-v8a\libjpush219.so
+* libs\arm64-v8a\libzllcmd.so => perLuanchActivity\src\main\jniLibs\arm64-v8a\libzllcmd.so
+* libs\armeabi-v7a\libicvss.so => perLuanchActivity\src\main\jniLibs\armeabi-v7a\libicvss.so
+* libs\armeabi-v7a\libjpush219.so => perLuanchActivity\src\main\jniLibs\armeabi-v7a\libjpush219.so
+* libs\armeabi-v7a\libzllcmd.so => perLuanchActivity\src\main\jniLibs\armeabi-v7a\libzllcmd.so
+* libs\armeabi\libADPCMAndroid.so => perLuanchActivity\src\main\jniLibs\armeabi\libADPCMAndroid.so
+* libs\armeabi\libAVAPIs.so => perLuanchActivity\src\main\jniLibs\armeabi\libAVAPIs.so
+* libs\armeabi\libAVAPIs_old.so => perLuanchActivity\src\main\jniLibs\armeabi\libAVAPIs_old.so
+* libs\armeabi\libAVAPIsT.so => perLuanchActivity\src\main\jniLibs\armeabi\libAVAPIsT.so
+* libs\armeabi\libFFmpeg.so => perLuanchActivity\src\main\jniLibs\armeabi\libFFmpeg.so
+* libs\armeabi\libG726Android.so => perLuanchActivity\src\main\jniLibs\armeabi\libG726Android.so
+* libs\armeabi\libH264Android.so => perLuanchActivity\src\main\jniLibs\armeabi\libH264Android.so
+* libs\armeabi\libicvss.so => perLuanchActivity\src\main\jniLibs\armeabi\libicvss.so
+* libs\armeabi\libIOTCAPIs.so => perLuanchActivity\src\main\jniLibs\armeabi\libIOTCAPIs.so
+* libs\armeabi\libIOTCAPIs_old.so => perLuanchActivity\src\main\jniLibs\armeabi\libIOTCAPIs_old.so
+* libs\armeabi\libIOTCAPIsT.so => perLuanchActivity\src\main\jniLibs\armeabi\libIOTCAPIsT.so
+* libs\armeabi\libjpush215.so => perLuanchActivity\src\main\jniLibs\armeabi\libjpush215.so
+* libs\armeabi\libjpush219.so => perLuanchActivity\src\main\jniLibs\armeabi\libjpush219.so
+* libs\armeabi\libMp3Android.so => perLuanchActivity\src\main\jniLibs\armeabi\libMp3Android.so
+* libs\armeabi\libSpeexAndroid.so => perLuanchActivity\src\main\jniLibs\armeabi\libSpeexAndroid.so
+* libs\armeabi\libzllcmd.so => perLuanchActivity\src\main\jniLibs\armeabi\libzllcmd.so
+* libs\base64-2.3.8.jar => perLuanchActivity\libs\base64-2.3.8.jar
+* libs\commons-lang3-3.1.jar => perLuanchActivity\libs\commons-lang3-3.1.jar
+* libs\core-2.2.jar => perLuanchActivity\libs\core-2.2.jar
+* libs\EquesSdkApp-out.jar => perLuanchActivity\libs\EquesSdkApp-out.jar
+* libs\fastjson-1.2.9.jar => perLuanchActivity\libs\fastjson-1.2.9.jar
+* libs\glide-3.6.1.jar => perLuanchActivity\libs\glide-3.6.1.jar
+* libs\imageloader.jar => perLuanchActivity\libs\imageloader.jar
+* libs\iotcamera.jar => perLuanchActivity\libs\iotcamera.jar
+* libs\irclass.jar => perLuanchActivity\libs\irclass.jar
+* libs\irutil.jar => perLuanchActivity\libs\irutil.jar
+* libs\jpush-android-2.1.9.jar => perLuanchActivity\libs\jpush-android-2.1.9.jar
+* libs\libactivity.jar => perLuanchActivity\libs\libactivity.jar
+* libs\libadapter.jar => perLuanchActivity\libs\libadapter.jar
+* libs\libapplication.jar => perLuanchActivity\libs\libapplication.jar
+* libs\libconstant.jar => perLuanchActivity\libs\libconstant.jar
+* libs\libdatainfo.jar => perLuanchActivity\libs\libdatainfo.jar
+* libs\libfragment.jar => perLuanchActivity\libs\libfragment.jar
+* libs\libupdata.jar => perLuanchActivity\libs\libupdata.jar
+* libs\mips64\libjpush219.so => perLuanchActivity\src\main\jniLibs\mips64\libjpush219.so
+* libs\mips\libjpush219.so => perLuanchActivity\src\main\jniLibs\mips\libjpush219.so
+* libs\mpchartlib.jar => perLuanchActivity\libs\mpchartlib.jar
+* libs\nineoldandroids-2.4.0.jar => perLuanchActivity\libs\nineoldandroids-2.4.0.jar
+* libs\nohttp1.0.6.jar => perLuanchActivity\libs\nohttp1.0.6.jar
+* libs\okhttp-2.7.0.jar => perLuanchActivity\libs\okhttp-2.7.0.jar
+* libs\okio-1.6.0.jar => perLuanchActivity\libs\okio-1.6.0.jar
+* libs\picasso-2.5.2.jar => perLuanchActivity\libs\picasso-2.5.2.jar
+* libs\umeng-analytics-v5.2.3.jar => perLuanchActivity\libs\umeng-analytics-v5.2.3.jar
+* libs\x86\libicvss.so => perLuanchActivity\src\main\jniLibs\x86\libicvss.so
+* libs\x86\libjpush219.so => perLuanchActivity\src\main\jniLibs\x86\libjpush219.so
+* libs\x86\libzllcmd.so => perLuanchActivity\src\main\jniLibs\x86\libzllcmd.so
+* libs\x86_64\libicvss.so => perLuanchActivity\src\main\jniLibs\x86_64\libicvss.so
+* libs\x86_64\libjpush219.so => perLuanchActivity\src\main\jniLibs\x86_64\libjpush219.so
+* libs\x86_64\libzllcmd.so => perLuanchActivity\src\main\jniLibs\x86_64\libzllcmd.so
+* lint.xml => perLuanchActivity\lint.xml
+* proguard-android.txt => perLuanchActivity\proguard-android.txt
+* res\ => perLuanchActivity\src\main\res\
+* src\ => perLuanchActivity\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

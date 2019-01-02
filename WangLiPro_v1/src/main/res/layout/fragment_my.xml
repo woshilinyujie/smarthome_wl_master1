@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+    <!--设备管理-->
+    <RelativeLayout
+        android:id="@+id/device_manage"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/device_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="设备管理"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+    <!-- 推送设置 -->
+    <RelativeLayout
+        android:id="@+id/push_setting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/push_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="推送设置"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+    <!-- 关于信息 -->
+    <RelativeLayout
+        android:id="@+id/about_info"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/help_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="关于及帮助"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout>

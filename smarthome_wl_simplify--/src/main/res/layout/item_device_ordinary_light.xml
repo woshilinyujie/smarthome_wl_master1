@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp">
+
+
+    <ImageView
+        android:id="@+id/iv_device"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/default_device"/>
+
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/iv_device"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/arrow_down" />
+
+    <ToggleButton
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_arrow"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:button="@drawable/ios7_btn"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        android:id="@+id/switch1"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_delaytime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_centerVertical="true"
+            android:text="延时操作"/>
+
+
+        <ImageView
+            android:id="@+id/iv_arrow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_up"
+            android:visibility="invisible"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_arrow02"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:button="@drawable/ios7_btn"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:id="@+id/switch2"/>
+
+    <TextView
+        android:id="@+id/tv_delaytime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/switch2"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        android:text="时间10秒"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

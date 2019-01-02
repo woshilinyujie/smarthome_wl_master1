@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/viewPager"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="100dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+    <TextView
+        android:id="@+id/picturecount"
+        android:layout_below="@id/viewPager"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+    <ImageView
+        android:id="@+id/alamss"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:id="@+id/videoViewLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="359dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

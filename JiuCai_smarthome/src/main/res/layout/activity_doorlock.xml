@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+    <RelativeLayout
+        android:id="@+id/linear1_doorlock"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/doorlock_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="门锁"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+        />
+        <ImageView
+            android:id="@+id/edit_icon_doorlock"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/doorlock_editdoorname"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/line1_image"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/white"
+        android:layout_below="@id/linear1_doorlock"
+        android:src="@color/app_bar_text_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/battery_icon_doorlock"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/power_25"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            />
+        />
+
+
+        <RelativeLayout
+            android:id="@+id/rel_doorlock_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/battery_icon_doorlock"
+        >
+            <com.fbee.smarthome_wl.ui.doorlock.CircleProgressView
+                android:id="@+id/circleview"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+            />
+
+            <ImageView
+                android:id="@+id/doorlock_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/empty_door"
+                android:layout_centerInParent="true"
+            />
+            <ImageView
+                android:id="@+id/doorlock_key"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/fanzhuan_lockimg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="88dp"
+            />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/doorlock_text_state"
+            android:layout_below="@id/rel_doorlock_icon"
+            android:layout_centerHorizontal="true"
+            android:text="门锁未激活"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/doorlock_text_state"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/record_linear_doorlock"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/retangle_empty_gray_bg"
+            >
+                <ImageView
+                    android:id="@+id/record_icon"
+                    android:layout_width="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="30dp"
+                    android:alpha="0.7"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/doorlock_record"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="开锁记录"
+                    android:textColor="@color/green_light"
+                    android:textSize="16sp"
+                />
+                <TextView
+                    android:id="@+id/btn_lock_record_hint"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:gravity="center"
+                    android:layout_alignTop="@id/record_icon"
+                    android:layout_alignRight="@id/record_icon"
+                    android:background="@drawable/bg_oval"
+                    android:textColor="@color/body_text"
+                    android:textSize="9sp"
+                    android:visibility="gone"
+
+
+                />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/account_linear_doorlock"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:background="@drawable/retangle_empty_gray_bg"
+                >
+                <ImageView
+                    android:id="@+id/account_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.7"
+                    android:src="@mipmap/doorlock_account"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="门锁账户"
+                    android:textSize="16sp"
+                    android:textColor="@color/green_light"
+                    android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                    android:id="@+id/textView5"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bind_device_sence"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+    <ListView
+        android:id="@+id/lv_bind_decice_sence"
+        android:layout_below="@id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</RelativeLayout>

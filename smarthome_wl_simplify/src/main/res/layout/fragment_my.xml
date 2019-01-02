@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"/>
+    <RelativeLayout
+        android:id="@+id/rl_user_picture_simplify"
+        android:layout_width="match_parent"
+        android:background="@drawable/item_selector"
+        android:layout_height="130dp">
+
+        <!-- 用户头像 -->
+        <ImageView
+            android:id="@+id/user_picture_simplify"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:padding="3dp"
+            android:src="@mipmap/default_user_picture" />
+
+
+        <!-- 用户信息 -->
+        <LinearLayout
+            android:id="@+id/already_login_simplify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/user_picture_simplify"
+            android:orientation="vertical">
+
+            <!-- 昵称 -->
+            <TextView
+                android:id="@+id/user_nick_simplify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textSize="15sp" />
+
+            <!-- 手机号 -->
+            <TextView
+                android:id="@+id/user_phone_simplify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:text="186****8564"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+    <RelativeLayout
+        android:id="@+id/gatewaylist_simplify"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/gate_way_simple" />
+
+        <TextView
+            android:id="@+id/textView7_simplify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="当前网关"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_gateway_simplify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textView7_simplify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+    <!--设备管理-->
+    <RelativeLayout
+        android:id="@+id/main_equipment_management_simplify"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/device_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="设备管理"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+    <!-- 推送设置 -->
+    <RelativeLayout
+        android:id="@+id/main_push_simplify"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/push_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="推送设置"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+    <!-- 关于信息 -->
+    <RelativeLayout
+        android:id="@+id/main_about_info_simplify"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/help_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="关于及帮助"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+    <!-- 切换模式 -->
+    <RelativeLayout
+        android:id="@+id/main_change_simplify"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/exchange_simple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:text="切换到家居版"
+            android:textSize="14sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_right" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.1"
+        android:background="@android:color/darker_gray" />
+
+
+</LinearLayout>

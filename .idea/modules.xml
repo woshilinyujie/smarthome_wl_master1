@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EZOpenSDK/EZOpenSDK.iml" filepath="$PROJECT_DIR$/EZOpenSDK/EZOpenSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threepartieslibrary/anychat/anychat.iml" filepath="$PROJECT_DIR$/threepartieslibrary/anychat/anychat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threepartieslibrary/libvlc/libvlc.iml" filepath="$PROJECT_DIR$/threepartieslibrary/libvlc/libvlc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/perLuanchActivity/perLuanchActivity.iml" filepath="$PROJECT_DIR$/perLuanchActivity/perLuanchActivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smarthome_wl/smarthome_wl.iml" filepath="$PROJECT_DIR$/smarthome_wl/smarthome_wl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smarthome_wl_master.iml" filepath="$PROJECT_DIR$/smarthome_wl_master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smarthome_wl_videolock/smarthome_wl_videolock.iml" filepath="$PROJECT_DIR$/smarthome_wl_videolock/smarthome_wl_videolock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threepartieslibrary/swipetoloadlayoutlibrary/swipetoloadlayoutlibrary.iml" filepath="$PROJECT_DIR$/threepartieslibrary/swipetoloadlayoutlibrary/swipetoloadlayoutlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threepartieslibrary/threepartieslibrary.iml" filepath="$PROJECT_DIR$/threepartieslibrary/threepartieslibrary.iml" />
+    </modules>
+  </component>
+</project>

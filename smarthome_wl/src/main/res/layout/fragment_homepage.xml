@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/header_rl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="56dp"
+                android:scaleType="center"
+                android:src="@mipmap/home_menu" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/home_house"
+                android:drawableRight="@mipmap/arrow_dowm"
+                android:drawablePadding="3dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="10"
+                android:text="标题"
+                android:textColor="@color/app_bar_text_title"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_right_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxEms="15"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="菜单"
+                android:textColor="@color/app_bar_text_title"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_right_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/tv_right_menu"
+                android:layout_centerInParent="true"
+                android:minWidth="56dp"
+                android:scaleType="center"
+                android:src="@mipmap/home_configuration" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.fbee.smarthome_wl.view.loopswitch.AutoSwitchView
+        android:id="@+id/loopswitch"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </com.fbee.smarthome_wl.view.loopswitch.AutoSwitchView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/home_video_pic" />
+
+
+        <ImageView
+            android:id="@+id/iv_switch_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_video"
+            android:layout_alignRight="@id/iv_video"
+            android:padding="16dp"
+            android:src="@mipmap/home_switch_cateyes" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_equipment_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_online_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@mipmap/home_cat_state"
+            android:drawablePadding="8dp"
+            android:text="在线" />
+
+        <TextView
+            android:id="@+id/tv_equipment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="大门" />
+
+
+        <TextView
+            android:id="@+id/tv_device_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@mipmap/home_electricity"
+            android:drawablePadding="8dp"
+            android:text="电量" />
+
+
+    </RelativeLayout>
+
+    <com.fbee.smarthome_wl.view.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.fbee.smarthome_wl.view.AnimationLinearLayout
+                android:id="@+id/layout_main_equip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_main_equip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/home_my_equipment"
+                        android:drawablePadding="8dp"
+                        android:text="常用设备" />
+
+                    <ImageView
+                        android:id="@+id/iv_icon_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/arrow_up" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="10dp"
+                    android:background="#e4e4e4" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_main_equip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </com.fbee.smarthome_wl.view.AnimationLinearLayout>
+
+
+            <com.fbee.smarthome_wl.view.AnimationLinearLayout
+                android:id="@+id/layout_main_scenario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_main_scenario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_icon_sarrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/arrow_up" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/home_my_scenario"
+                        android:drawablePadding="8dp"
+                        android:text="常用场景" android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" android:id="@+id/textView9"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="10dp"
+                    android:background="#e4e4e4" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_main_scenario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </com.fbee.smarthome_wl.view.AnimationLinearLayout>
+
+        </LinearLayout>
+
+    </com.fbee.smarthome_wl.view.MyScrollview>
+
+</LinearLayout>

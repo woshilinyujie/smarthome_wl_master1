@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="main_activity_theme" parent="AppTheme">
+        <!--<item name="android:windowBackground">@mipmap/splashimage</item>-->
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+    </style>
+
+    <style name="activity_theme" parent="AppTheme">
+        <item name="android:windowBackground">@mipmap/splashimage</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <style name="dialog_translucent" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否悬浮在activity上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 背景缓存颜色 -->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!-- 点击外部区域不关闭 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!-- 设置跳转效果 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+
+
+
+    <style name="Dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 主界面底部菜单样式 -->
+    <style name="main_tab_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@drawable/main_tab_textcolor</item>
+    </style>
+
+    <style name="CellLayout">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">50.0dip</item>
+    </style>
+    <style name="MySwitchTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/my_switch_selector</item>
+    </style>
+    <!-- CustomCheckBox theme -->
+        <style name="CustomCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+             <item name="android:button">@drawable/item_selector_delete</item>
+         </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popup_in</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/popup_out</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="android:style/Theme.Holo.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="Switch" parent="Theme.AppCompat.Light">
+        <!-- Active thumb color & Active track color(30% transparency) switch 打开时的拇指按钮的颜色 轨迹颜色默认为30%这个颜色 -->
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <!-- Inactive thumb color switch关闭时的拇指按钮的颜色 -->
+        <item name="colorSwitchThumbNormal">#888888</item>
+        <!-- Inactive track color(30% transparency) switch关闭时的轨迹的颜色  30%这个颜色 -->
+        <item name="android:colorForeground">#888888</item>
+    </style>
+
+    <style name="address_dialog_style">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,233 @@
+CURRENT STATS:
+System memory usage:
+  SOff/Norm: 9 samples:
+    Cached: 344MB min, 596MB avg, 757MB max
+    Free: 34MB min, 66MB avg, 108MB max
+    ZRam: 85MB min, 101MB avg, 137MB max
+    Kernel: 317MB min, 367MB avg, 392MB max
+    Native: 53MB min, 56MB avg, 58MB max
+  SOn /Norm: 2 samples:
+    Cached: 259MB min, 430MB avg, 600MB max
+    Free: 36MB min, 54MB avg, 72MB max
+    ZRam: 90MB min, 114MB avg, 138MB max
+    Kernel: 355MB min, 362MB avg, 368MB max
+    Native: 58MB min, 65MB avg, 72MB max
+       Low : 2 samples:
+    Cached: 710MB min, 740MB avg, 771MB max
+    Free: 92MB min, 223MB avg, 354MB max
+    ZRam: 88MB min, 90MB avg, 91MB max
+    Kernel: 308MB min, 312MB avg, 317MB max
+    Native: 56MB min, 57MB avg, 57MB max
+       Crit: 1 samples:
+    Cached: 652MB min, 652MB avg, 652MB max
+    Free: 511MB min, 511MB avg, 511MB max
+    ZRam: 91MB min, 91MB avg, 91MB max
+    Kernel: 304MB min, 304MB avg, 304MB max
+    Native: 58MB min, 58MB avg, 58MB max
+
+Per-Package Stats:
+  * com.jwl.android.wanglipro / u0a56 / v1:
+      * com.jwl.android.wanglipro / u0a56 / v1:
+               TOTAL: 86% (12MB-24MB-45MB/9.5MB-20MB-40MB over 87)
+                 Top: 72% (17MB-24MB-45MB/14MB-21MB-40MB over 83)
+             Service: 14% (12MB-19MB-30MB/9.5MB-16MB-25MB over 4)
+            (Cached): 0.17%
+      * com.jwl.android.wanglipro.BgService:
+        Process: com.jwl.android.wanglipro
+            Running count 80 / time 86%
+            Started count 72 / time 86%
+          Executing count 93 / time 0.09%
+
+Summary:
+  * com.jwl.android.wanglipro / u0a56 / v1:
+           TOTAL: 86% (12MB-24MB-45MB/9.5MB-20MB-40MB over 87)
+             Top: 72% (17MB-24MB-45MB/14MB-21MB-40MB over 83)
+         Service: 14% (12MB-19MB-30MB/9.5MB-16MB-25MB over 4)
+        (Cached): 0.17%
+
+Run time Stats:
+  SOff/Norm: +38m33s192ms (running)
+       Mod : +4m2s924ms
+  SOn /Norm: +1h54m22s200ms
+       Mod : +1m11s466ms
+       Low : +30s92ms
+       Crit: +2m2s124ms
+      TOTAL: +2h40m41s998ms
+
+Memory usage:
+  Kernel : 357MB (107 samples)
+  Native : 57MB (107 samples)
+  Persist: 369MB (900 samples)
+  Top    : 59MB (1558 samples)
+  ImpFg  : 290MB (1987 samples)
+  ImpBg  : 52MB (595 samples)
+  Service: 301MB (3118 samples)
+  Receivr: 230KB (1783 samples)
+  LastAct: 1.2MB (3 samples)
+  CchAct : 359KB (4 samples)
+  CchEmty: 167MB (1479 samples)
+  Cached : 597MB (107 samples)
+  Free   : 106MB (107 samples)
+  Z-Ram  : 100MB (107 samples)
+  TOTAL  : 2.4GB
+  ServRst: 12MB (1142 samples)
+
+          Start time: 2017-08-01 16:53:37
+  Total elapsed time: +2h48m8s897ms (partial) libart.so
+
+AGGREGATED OVER LAST 24 HOURS:
+System memory usage:
+  SOff/Norm: 33 samples:
+    Cached: 93MB min, 534MB avg, 757MB max
+    Free: 7.2MB min, 107MB avg, 790MB max
+    ZRam: 40MB min, 89MB avg, 164MB max
+    Kernel: 301MB min, 353MB avg, 438MB max
+    Native: 42MB min, 59MB avg, 97MB max
+  SOn /Norm: 18 samples:
+    Cached: 259MB min, 630MB avg, 0.98GB max
+    Free: 36MB min, 75MB avg, 163MB max
+    ZRam: 27MB min, 83MB avg, 138MB max
+    Kernel: 301MB min, 330MB avg, 375MB max
+    Native: 42MB min, 56MB avg, 99MB max
+       Low : 2 samples:
+    Cached: 710MB min, 740MB avg, 771MB max
+    Free: 92MB min, 223MB avg, 354MB max
+    ZRam: 88MB min, 90MB avg, 91MB max
+    Kernel: 308MB min, 312MB avg, 317MB max
+    Native: 56MB min, 57MB avg, 57MB max
+       Crit: 2 samples:
+    Cached: 652MB min, 707MB avg, 762MB max
+    Free: 273MB min, 392MB avg, 511MB max
+    ZRam: 76MB min, 84MB avg, 91MB max
+    Kernel: 303MB min, 304MB avg, 304MB max
+    Native: 55MB min, 56MB avg, 58MB max
+
+Per-Package Stats:
+  * com.jwl.android.wanglipro / u0a56 / v1:
+      * com.jwl.android.wanglipro / u0a56 / v1:
+               TOTAL: 64% (12MB-25MB-45MB/9.5MB-22MB-40MB over 295)
+                 Top: 57% (16MB-26MB-45MB/14MB-22MB-40MB over 287)
+             Service: 7.2% (12MB-22MB-34MB/9.5MB-19MB-30MB over 8)
+          (Last Act): 1.6% (22MB-23MB-26MB/18MB-20MB-22MB over 3)
+            (Cached): 16% (12MB-16MB-25MB/10MB-14MB-20MB over 6)
+      * com.jwl.android.wanglipro.BgService:
+        Process: com.jwl.android.wanglipro
+            Running count 134 / time 35%
+            Started count 126 / time 35%
+          Executing count 167 / time 0.07%
+
+Summary:
+  * com.jwl.android.wanglipro / u0a56 / v1:
+           TOTAL: 64% (12MB-25MB-45MB/9.5MB-22MB-40MB over 295)
+             Top: 57% (16MB-26MB-45MB/14MB-22MB-40MB over 287)
+         Service: 7.2% (12MB-22MB-34MB/9.5MB-19MB-30MB over 8)
+      (Last Act): 1.6% (22MB-23MB-26MB/18MB-20MB-22MB over 3)
+        (Cached): 16% (12MB-16MB-25MB/10MB-14MB-20MB over 6)
+
+Run time Stats:
+  SOff/Norm: +4h2m40s987ms
+       Mod : +4m2s924ms
+  SOn /Norm: +10h32m7s238ms
+       Mod : +2m2s547ms
+       Low : +30s163ms
+       Crit: +2m31s505ms
+      TOTAL: +14h43m55s364ms
+
+Memory usage:
+  Kernel : 336MB (381 samples)
+  Native : 57MB (381 samples)
+  Persist: 376MB (3605 samples)
+  Top    : 114MB (7530 samples)
+  ImpFg  : 304MB (10231 samples)
+  ImpBg  : 43MB (3797 samples)
+  Service: 338MB (14425 samples)
+  Receivr: 235KB (11264 samples)
+  LastAct: 5.3MB (215 samples)
+  CchAct : 20MB (78 samples)
+  CchCAct: 1.0MB (27 samples)
+  CchEmty: 166MB (8405 samples)
+  Cached : 603MB (381 samples)
+  Free   : 84MB (381 samples)
+  Z-Ram  : 85MB (381 samples)
+  TOTAL  : 2.5GB
+  ServRst: 4.5MB (7895 samples)
+
+          Start time: 2017-07-31 18:55:45
+  Total elapsed time: +1d0h38m58s323ms (partial) libart.so
+
+AGGREGATED OVER LAST 3 HOURS:
+System memory usage:
+  SOff/Norm: 9 samples:
+    Cached: 344MB min, 596MB avg, 757MB max
+    Free: 34MB min, 66MB avg, 108MB max
+    ZRam: 85MB min, 101MB avg, 137MB max
+    Kernel: 317MB min, 367MB avg, 392MB max
+    Native: 53MB min, 56MB avg, 58MB max
+  SOn /Norm: 2 samples:
+    Cached: 259MB min, 430MB avg, 600MB max
+    Free: 36MB min, 54MB avg, 72MB max
+    ZRam: 90MB min, 114MB avg, 138MB max
+    Kernel: 355MB min, 362MB avg, 368MB max
+    Native: 58MB min, 65MB avg, 72MB max
+       Low : 2 samples:
+    Cached: 710MB min, 740MB avg, 771MB max
+    Free: 92MB min, 223MB avg, 354MB max
+    ZRam: 88MB min, 90MB avg, 91MB max
+    Kernel: 308MB min, 312MB avg, 317MB max
+    Native: 56MB min, 57MB avg, 57MB max
+       Crit: 1 samples:
+    Cached: 652MB min, 652MB avg, 652MB max
+    Free: 511MB min, 511MB avg, 511MB max
+    ZRam: 91MB min, 91MB avg, 91MB max
+    Kernel: 304MB min, 304MB avg, 304MB max
+    Native: 58MB min, 58MB avg, 58MB max
+
+Per-Package Stats:
+  * com.jwl.android.wanglipro / u0a56 / v1:
+      * com.jwl.android.wanglipro / u0a56 / v1:
+               TOTAL: 86% (12MB-24MB-45MB/9.5MB-20MB-40MB over 87)
+                 Top: 72% (17MB-24MB-45MB/14MB-21MB-40MB over 83)
+             Service: 14% (12MB-19MB-30MB/9.5MB-16MB-25MB over 4)
+            (Cached): 0.17%
+      * com.jwl.android.wanglipro.BgService:
+        Process: com.jwl.android.wanglipro
+            Running count 80 / time 86%
+            Started count 72 / time 86%
+          Executing count 93 / time 0.09%
+
+Summary:
+  * com.jwl.android.wanglipro / u0a56 / v1:
+           TOTAL: 86% (12MB-24MB-45MB/9.5MB-20MB-40MB over 87)
+             Top: 72% (17MB-24MB-45MB/14MB-21MB-40MB over 83)
+         Service: 14% (12MB-19MB-30MB/9.5MB-16MB-25MB over 4)
+        (Cached): 0.17%
+
+Run time Stats:
+  SOff/Norm: +38m33s268ms
+       Mod : +4m2s924ms
+  SOn /Norm: +1h54m22s200ms
+       Mod : +1m11s466ms
+       Low : +30s92ms
+       Crit: +2m2s124ms
+      TOTAL: +2h40m42s74ms
+
+Memory usage:
+  Kernel : 357MB (107 samples)
+  Native : 57MB (107 samples)
+  Persist: 369MB (900 samples)
+  Top    : 59MB (1558 samples)
+  ImpFg  : 290MB (1987 samples)
+  ImpBg  : 52MB (595 samples)
+  Service: 301MB (3118 samples)
+  Receivr: 230KB (1783 samples)
+  LastAct: 1.2MB (3 samples)
+  CchAct : 359KB (4 samples)
+  CchEmty: 167MB (1479 samples)
+  Cached : 597MB (107 samples)
+  Free   : 106MB (107 samples)
+  Z-Ram  : 100MB (107 samples)
+  TOTAL  : 2.4GB
+  ServRst: 12MB (1142 samples)
+
+          Start time: 2017-08-01 16:53:37
+  Total elapsed time: +2h48m8s969ms (partial) libart.so

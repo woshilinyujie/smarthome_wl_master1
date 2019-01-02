@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rl_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+    >
+
+        <ImageView
+            android:id="@+id/iv_nodata"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/no_data"
+        />
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_nodata"
+            android:textSize="14sp"
+            android:textColor="#CDCDCD"
+            android:text="空空如也.."
+        />
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list"
+        android:name="com.fbee.smarthome_wl.ui.homedeviceedit.EquipEditFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="com.fbee.smarthome_wl.ui.homedeviceedit.EquipEditFragment"
+        tools:listitem="@layout/fragment_item"/>
+</LinearLayout>
+
+
+
+

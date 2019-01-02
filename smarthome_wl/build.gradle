@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'//增加这一句
+apply plugin: 'android-apt'//增加这一句
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_HH-mm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.fbee.smarthome_wl"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 134
+        versionName "3.1.1797"
+        multiDexEnabled true
+    }
+    dexOptions {
+        jumboMode = true
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(WL_STORE_FILE)
+            storePassword WL_STORE_PASSWORD
+            keyAlias WL_KEY_ALIAS
+            keyPassword WL_KEY_PASSWORD
+        }
+
+        debug {
+            storeFile file(WL_STORE_FILE)
+            storePassword WL_STORE_PASSWORD
+            keyAlias WL_KEY_ALIAS
+            keyPassword WL_KEY_PASSWORD
+        }
+    }
+
+
+
+    buildTypes {
+        release {
+            buildConfigField("boolean", "LOG_DEBUG", "false")
+            buildConfigField("String", "URL", "\"https://www.fbeecloud.com/c2/\"")
+            buildConfigField("String", "UPDATEURL", "\"http://pus.wonlycloud.com:12100\"")
+            //是否混淆
+            minifyEnabled true
+            debuggable false
+            jniDebuggable false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+
+            buildConfigField("boolean", "LOG_DEBUG", "true")
+            buildConfigField("String", "URL", "\"https://www.fbeecloud.com/c2/\"")
+            buildConfigField("String", "UPDATEURL", "\"http://pus.wonlycloud.com:12100\"")
+            //是否混淆
+            minifyEnabled false
+            debuggable true
+            zipAlignEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    //打包时开启，调试时关闭（studio2.2以上不需要关闭）
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                //这里修改apk文件名
+                def fileName = "smarthome_wl_${variant.buildType.name}_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                //                def fileName = "smarthome_wl_${variant.buildType.name}_v${defaultConfig.versionName}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+                //                output.outputFile = new File("smarthome_wl/apk", fileName)
+            }
+        }
+    }
+
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+
+
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:24.+'
+    compile project(':threepartieslibrary:swipetoloadlayoutlibrary')
+    //   compile project(':threepartieslibrary:anychat')
+    compile 'io.reactivex:rxjava:1.2.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.android.support:design:24.+'
+    compile 'com.android.support:support-v4:24.+'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.franmontiel:PersistentCookieJar:v1.0.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile 'de.greenrobot:greendao:1.3.7'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jaeger.statusbaruitl:library:1.0.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    apt 'com.jakewharton:butterknife-compiler:8.8.1'//增加这一句
+    compile files('libs/EZOpenSDK_V4.8.4.20180810.jar')
+    compile files('libs/jmdns-3.4.1.jar')
+}
+
+
+

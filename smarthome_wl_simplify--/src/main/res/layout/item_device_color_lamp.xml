@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/animalayout_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_device"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/device_color_bulb"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/iv_device"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="调色灯"/>
+
+            <TextView
+                android:id="@+id/tv_device_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dimgrey"
+                android:layout_marginTop="8dp"
+                android:text="可控制该灯泡的颜色"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_down"/>
+
+        <ToggleButton
+            android:id="@+id/switch_light"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_arrow"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:button="@drawable/ios7_btn"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""/>
+
+            <com.fbee.smarthome_wl.view.CircleView
+                android:id="@+id/iv_color"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:layout_toLeftOf="@id/switch_light"
+                android:layout_marginRight="8dp"
+               />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="54dp"
+            android:textColor="@color/dimgrey"
+            android:textSize="15sp"
+            android:text="亮度:"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="255"
+            android:padding="8dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/seekBar_light" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+       >
+
+        <ImageView
+            android:id="@+id/iv_slatebule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/oval_solide_slateblue"/>
+
+        <ImageView
+            android:id="@+id/iv_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/oval_solide_bule"/>
+
+        <ImageView
+            android:id="@+id/iv_green"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/oval_solide_green"/>
+
+
+        <ImageView
+            android:id="@+id/iv_orange"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/oval_solide_orange"/>
+
+        <ImageView
+            android:id="@+id/iv_red"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/oval_solide_red"/>
+
+
+
+        <ImageView
+            android:id="@+id/iv_palette"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/light_palette"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_delaytime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_centerVertical="true"
+            android:text="延时操作"/>
+
+
+        <ImageView
+            android:id="@+id/iv_arrow02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_up"
+            android:visibility="invisible"/>
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_arrow02"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:button="@drawable/ios7_btn"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            android:id="@+id/switch2"/>
+
+        <TextView
+            android:id="@+id/tv_delaytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/switch2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            android:text="时间10秒"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

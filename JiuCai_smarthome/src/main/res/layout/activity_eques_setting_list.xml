@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linear_updateDevName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="名称"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_dev_detailsName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_pirTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动报警时间"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_pirTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_sensitivity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="监控灵敏度"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_sensitivity"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linera_pirMode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_setAlarm"
+                    style="@style/CellLayout"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:paddingLeft="15.0dip"
+                        android:text="智能人体侦测"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_alarm"
+                        style="@style/MySwitchTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_setLight"
+                    style="@style/CellLayout"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:paddingLeft="15.0dip"
+                        android:text="门铃灯开关"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/cb_light"
+                        style="@style/MySwitchTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_doorbell_ring"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="门铃声"
+                        android:textColor="@color/black"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@+id/tv_doorbell_ring"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15.0dp"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        android:textSize="16.0dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/arrow_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_pirMode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="报警模式"
+                        android:textColor="@color/black"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@+id/tv_pirMode"
+                        android:layout_width="0.0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15.0dp"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        android:textSize="16.0dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/arrow_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_continuousCapture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="连拍张数"
+                        android:textColor="@color/black"
+                        android:textSize="16.0dip" />
+
+                    <TextView
+                        android:id="@+id/tv_continuousCapture"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15.0dp"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:textColor="#000000"
+                        android:textSize="16.0dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@mipmap/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_pirRingtone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动报警铃声选择"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_pirRingtone"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:textColor="#000000"
+                    android:textSize="16.0dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@mipmap/arrow_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_seekber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="报警声音"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:src="@mipmap/voice_mune" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_alarmSettingVolume"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1.0"
+                    android:max="6"
+                    android:maxHeight="2.0dp"
+                    android:minHeight="2.0dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:progress="0" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/voice_max" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_NetworkSettings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前网络:"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_wifiConfig"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="15.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_device_Id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设备ID:"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/tv_devId"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="15.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_currentVerison"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:text="当前设备版本:"
+                    android:textColor="@color/black"
+                    android:textSize="16.0dip" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="15.0dip" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_restartDevice"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@color/white"
+                android:text="远程重启设备"
+                android:textColor="#ff0000"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_delete_device"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/white"
+                android:text="删除设备"
+                android:textColor="#ff0000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

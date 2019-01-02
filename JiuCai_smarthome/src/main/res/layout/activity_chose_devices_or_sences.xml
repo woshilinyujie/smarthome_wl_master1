@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chose_devices_or_sences"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fbee.smarthome_wl.ui.choseareaorsensces.ChoseAreaOrSencesActivity">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chose_devices_or_sences_addrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+    />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="可添加选项"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chose_devices_or_sences_deleterecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+    />
+</LinearLayout>

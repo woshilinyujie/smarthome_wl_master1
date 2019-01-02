@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:background="@drawable/item_selector"
+                android:minHeight="60dp"
+              android:layout_height="60dp">
+            <TextView
+                android:id="@+id/user_num_text"
+                android:text="用户编号"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/user_alairs_text"
+                android:layout_width="wrap_content"
+                android:text="用户别名"
+                android:visibility="gone"
+                android:layout_toRightOf="@id/user_num_text"
+                android:layout_marginLeft="100dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/button_user"
+                android:layout_width="25dp"
+                android:focusable="false"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/unselected"
+                android:layout_marginRight="20dp"
+                android:layout_height="25dp"
+            />
+</RelativeLayout>

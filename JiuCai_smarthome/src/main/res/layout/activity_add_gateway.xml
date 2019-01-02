@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/capture_crop_view"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/capture_mask_top"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/scan_code_bg"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/dimgrey"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="18sp"
+            android:text="该账户暂无网关\n请扫描二维码添加"/>
+
+
+        </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="添加"
+        android:background="@drawable/rectangle_solide_btn_bg"/>
+
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        android:text="跳过"
+        android:background="@drawable/rectangle_empty_white_bg"/>
+
+
+</LinearLayout>

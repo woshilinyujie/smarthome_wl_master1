@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp"
+            android:textColor="@color/dimgrey"
+            android:text="提示"/>
+
+        <ImageView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:background="@drawable/item_selector"
+            android:textColor="@color/colorAccent"
+            android:src="@mipmap/cancel_img"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#e4e4e4" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/dimgrey"
+            android:text="状态:"/>
+
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/dimgrey"
+            android:background="@drawable/item_selector"
+            android:text="关"/>
+
+
+        <TextView
+            android:id="@+id/tv_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_close"
+            android:layout_marginRight="16dp"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="@color/dimgrey"
+            android:background="@drawable/item_selector"
+            android:text="停"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_stop"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/dimgrey"
+            android:background="@drawable/item_selector"
+            android:text="开"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

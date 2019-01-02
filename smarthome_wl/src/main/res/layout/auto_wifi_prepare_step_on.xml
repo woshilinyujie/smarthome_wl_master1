@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wifi_config_bg"
+    android:orientation="vertical" >
+
+    <com.videogo.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/topTip"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/tip_heard_voice"
+            android:textColor="@color/title_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageBg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/prepare_device" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/login_btn_selector"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnIntroduce"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ez_btn_r1_retry_selector"
+            android:text="下一步"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

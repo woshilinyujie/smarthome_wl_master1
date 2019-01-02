@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:descendantFocusability="blocksDescendants"
+              android:minHeight="60dp"
+              android:layout_height="60dp">
+    <TextView
+        android:id="@+id/gateway_name_item_add_subuser"
+        android:text="网关"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="100dp"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:maxEms="8"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:text="普通用户"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"/>
+    <Button
+        android:id="@+id/user_checkb_item_add_subuser"
+        android:layout_width="25dp"
+        android:layout_marginLeft="5dp"
+        android:background="@mipmap/unselected"
+        android:gravity="center"
+        android:layout_height="25dp"
+    />
+    <TextView
+        android:text="管理员"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"/>
+
+    <Button
+        android:id="@+id/admin_checkb_item_add_subuser"
+        android:layout_width="25dp"
+        android:layout_marginLeft="5dp"
+        android:background="@mipmap/unselected"
+        android:gravity="center"
+        android:layout_height="25dp"
+    />
+
+</LinearLayout>

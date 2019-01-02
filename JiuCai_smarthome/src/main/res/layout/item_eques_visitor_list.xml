@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="Orientation">
+
+
+    <LinearLayout
+        android:id="@+id/warning_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:enabled="false"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/checkBox"
+            android:scaleType="centerCrop"
+            android:background="@mipmap/item_visitor" />
+
+        <LinearLayout
+
+            android:id="@+id/linearlayout01"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_toEndOf="@+id/iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="叮咚2发生人体感应事件"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="2016-09-09 08:40:20"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

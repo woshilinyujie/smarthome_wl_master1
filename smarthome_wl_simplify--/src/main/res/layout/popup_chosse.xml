@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rectangle_solide_white_bg">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:gravity="center"
+        android:background="@drawable/item_selector"
+        android:clickable="true"
+        android:text="添加网关"/>
+
+
+</LinearLayout>

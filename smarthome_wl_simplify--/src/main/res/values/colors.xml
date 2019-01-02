@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="sestem_window_bg">#FAFAFA</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="colorAccent">#3DA46E</color>
+    <color name="green_light">#76C297</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray_bg">#e1e1e1</color>
+    // main
+    <color name="main_left_menu_text">#FF333333</color>
+    // title
+    <color name="app_bar_text_title">#FFDDDDDD</color>
+    <color name="window_bg">#FFF0F0F0</color>
+    <color name="black">#000</color>
+    <color name="dimgrey">#696969</color>
+    <color name="selector_color">#d8d8d8</color>
+    <color name="divider_title">#efefef</color>
+    <color name="login_edit">#FF333333</color>
+    <color name="red">#ff0000</color>
+    <!-- 二维码-->
+    <color name="code_text_color">#FFE5E5E5</color>
+    <color name="scan_text">#FFDDDDDD</color>
+    <color name="ui_highlight_standard">#17000000</color>
+    <color name="line_horizontal_smart">#919191</color>
+    <color name="halftransparent">#99000000</color>
+
+    <color name="news_home_btn_selected">#2a5caa</color>
+    <color name="color_gray_text">#333333</color>
+    <color name="color_btn_text">#1F2831</color>
+    <color name="text_notify">#3399cc</color>
+    <color name="body_text">#ffffff</color>
+    //轮播
+    <color name="loopswitch_page_current">#ffffffff</color>
+    <color name="loopswitch_page_other">#80ffffff</color>
+</resources>

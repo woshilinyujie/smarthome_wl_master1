@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector">
+
+
+    <ImageView
+        android:id="@+id/iv_icon_equess_doorlock"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/tv_text_equess_doorlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_icon_equess_doorlock"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:paddingTop="5dp"
+        android:text="cj" />
+<!--
+    <TextView
+        android:id="@+id/text_lock_record_hint"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignRight="@id/iv_icon_equess_doorlock"
+        android:layout_alignTop="@id/iv_icon_equess_doorlock"
+        android:background="@drawable/bg_oval"
+        android:gravity="center"
+        android:textColor="@color/body_text"
+        android:textSize="9sp"
+        android:visibility="gone" />-->
+</RelativeLayout>
+

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">王力智能</string>
+    <string name="str_device_door_lock_alarm_type_0">拆锁报警</string>
+    <string name="str_device_door_lock_alarm_type_1">未关锁报警</string>
+    <string name="str_device_door_lock_alarm_type_2">胁迫报警</string>
+    <string name="str_device_door_lock_alarm_type_3">假锁报警</string>
+    <string name="str_device_door_lock_alarm_type_4">取消报警</string>
+    <string name="str_device_door_lock_alarm_type_5">非法操作</string>
+    <drawable name="clr_normal">#D6D7D7</drawable>
+    <drawable name="clr_pressed">#696969</drawable>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

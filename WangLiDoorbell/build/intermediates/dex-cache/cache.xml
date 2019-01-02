@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="F:\Desktop\F\WangLiDoorbell_20161013\WangLiDoorbell\app\libs\okio-1.10.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4b316c469df09d8b5b173def1dfd79881a38310">
+        <dex dex="F:\Desktop\F\WangLiDoorbell_20161013\WangLiDoorbell\app\build\intermediates\pre-dexed\debug\okio-1.10.0_5ca47de562e6fbb6f96f2d8c62532e03ea1858fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Desktop\F\WangLiDoorbell_20161013\WangLiDoorbell\app\libs\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="F:\Desktop\F\WangLiDoorbell_20161013\WangLiDoorbell\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_7d64fb7d28b642d8307a8be4bdd123307e3b435f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Desktop\F\WangLiDoorbell_20161013\WangLiDoorbell\app\libs\android-support-v4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="48c94ae70fa65718b382098237806a5909bb096e">
+        <dex dex="F:\Desktop\F\WangLiDoorbell_20161013\WangLiDoorbell\app\build\intermediates\pre-dexed\debug\android-support-v4_c92dad68b8134f5610d16c5f0e97c91639d5a429.jar" />
+    </item>
+
+</items>

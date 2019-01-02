@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="24dp"
+              android:layout_marginRight="24dp"
+              android:background="@drawable/rectangle_solide_white_bg"
+              android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:textSize="17sp"
+        android:textColor="@color/color_gray_text"
+        android:text="修改设备名称"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#e4e4e4" />
+
+    <EditText
+        android:id="@+id/tv_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:layout_gravity="center_horizontal"
+        android:textSize="14sp"
+        android:textColor="@color/dimgrey"
+        />
+    <TextView
+        android:id="@+id/tv_dialog_hint"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:text="建议使用实际名称，方便多人共用门锁时辨别用户，尽量不要使用外公/外婆等关系词"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/tv_left_cancel_btn"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorAccent"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="7dp"
+            android:text="取消"
+            android:background="@drawable/rectangle_empty_white_bg"/>
+
+
+        <TextView
+            android:id="@+id/tv_right_confirm_btn"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="7dp"
+            android:text="确定"
+            android:background="@drawable/rectangle_solide_btn_bg"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
