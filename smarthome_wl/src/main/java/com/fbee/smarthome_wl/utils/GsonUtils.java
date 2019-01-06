@@ -20,6 +20,12 @@ import java.util.ArrayList;
  */
 
 public class GsonUtils {
+    private static Gson gson;
+    static {
+        if (gson == null) {
+            gson = new Gson();
+        }
+    }
     public static <T> ArrayList<T> jsonToArrayList(String json, Class<T> clazz)
     {
         Type type = new TypeToken<ArrayList<JsonObject>>()
@@ -53,6 +59,20 @@ public class GsonUtils {
         }
     }
 
+    /**
+     * 转成bean
+     *
+     * @param gsonString
+     * @param cls
+     * @return
+     */
+    public static <T> T GsonToBean(String gsonString, Class<T> cls) {
+        T t = null;
+        if (gson != null) {
+            t = gson.fromJson(gsonString, cls);
+        }
+        return t;
+    }
     /**
      * 转成json字符串
      *

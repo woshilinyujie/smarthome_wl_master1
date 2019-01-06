@@ -237,6 +237,13 @@ public class ApiWrapper extends Api {
     public  Observable<JsonObject> querySubUserInfo(Ums ums){
         return  applySchedulers(getService().umsService(ums));
     }
+    /**
+     * 查询ys消息
+     * @return
+     */
+    public  Observable<JsonObject> queryYsInfo(Ums ums){
+        return  applySchedulers(getService().umsService(ums));
+    }
 
 
     /**

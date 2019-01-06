@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.fbee.smarthome_wl.R;
 import com.fbee.smarthome_wl.base.BaseActivity;
+import com.fbee.smarthome_wl.ui.YsPlay.YsReportActivity;
 import com.fbee.smarthome_wl.ui.YsPlay.YsplayActivity;
 import com.videogo.constant.Constant;
 import com.videogo.openapi.EZConstants;
@@ -44,6 +45,7 @@ public class YsEyeActivity extends BaseActivity {
     private ImageView ys_video_view;
     private String random;
     private String uuid;
+    private ImageView ys_iv_visitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,9 @@ public class YsEyeActivity extends BaseActivity {
     @Override
     protected void initView() {
         ys_video_view = (ImageView) findViewById(R.id.ys_video_view);
+        ys_iv_visitor = (ImageView) findViewById(R.id.ys_iv_visitor);
         ys_video_view.setOnClickListener(this);
+        ys_iv_visitor.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +76,12 @@ public class YsEyeActivity extends BaseActivity {
                 intent.putExtra("uuid",uuid);
                 intent.putExtra("random",random);
                 startActivity(intent);
+                break;
+            case R.id.ys_iv_visitor:
+                Intent intent1=new Intent(this, YsReportActivity.class);
+                intent1.putExtra("uuid",uuid);
+                intent1.putExtra("random",random);
+                startActivity(intent1);
                 break;
         }
     }

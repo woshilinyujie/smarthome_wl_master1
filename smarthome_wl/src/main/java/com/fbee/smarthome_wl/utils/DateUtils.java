@@ -256,4 +256,5 @@ public class DateUtils {
         date = formatter.parse(strTime);
         return date;
     }
+
 }

@@ -229,7 +229,6 @@ public class EquesVisitorActivity extends BaseActivity implements OnRefreshListe
         if (!AppUtil.isNetworkAvailable(this)) {
             showToast("当前网络异常！");
             onRefreshComplete();
-            return;
         }
         if (visitors.size() > 0) {
             visitorSize = visitors.size();

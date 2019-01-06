@@ -7,6 +7,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -23,20 +24,22 @@ public class ScreenOrientationHelper implements SensorEventListener {
 
     private SensorManager mSensorManager;
     private Sensor[] mSensors;
-
+    private SurfaceView ysSv;
     private float[] mAccelerometerValues = new float[3];
     private float[] mMagneticFieldValues = new float[3];
+    public int height;
 
     public ScreenOrientationHelper(Activity activity) {
-        this(activity, null, null);
+        this(activity, null, null, null);
     }
 
     public ScreenOrientationHelper(Activity activity, CheckTextButton button) {
-        this(activity, button, null);
+        this(activity, button, null, null);
     }
 
-    public ScreenOrientationHelper(Activity activity, CheckTextButton button1, CheckTextButton button2) {
+    public ScreenOrientationHelper(Activity activity, CheckTextButton button1, CheckTextButton button2, SurfaceView ysSv) {
         mActivity = activity;
+        this.ysSv = ysSv;
         mSensorManager = (SensorManager) mActivity.getSystemService(Context.SENSOR_SERVICE);
 
         mButton1 = button1;
@@ -105,6 +108,8 @@ public class ScreenOrientationHelper implements SensorEventListener {
     }
 
     public void landscape() {
+        if(height<ysSv.getHeight())
+            height = ysSv.getHeight();
         mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setButtonChecked(true);
         mPortraitOrLandscape = false;
@@ -268,4 +273,6 @@ public class ScreenOrientationHelper implements SensorEventListener {
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
+
+
 }
