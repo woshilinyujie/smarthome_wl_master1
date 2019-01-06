@@ -16,6 +16,9 @@ import com.fbee.smarthome_wl.constant.DeviceList;
 import com.fbee.smarthome_wl.ui.main.MainActivity;
 import com.fbee.smarthome_wl.utils.PreferencesUtils;
 import com.fbee.zllctl.DeviceInfo;
+import com.videogo.exception.BaseException;
+import com.videogo.openapi.EZOpenSDK;
+import com.videogo.openapi.bean.EZDeviceInfo;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -30,25 +33,24 @@ import java.util.List;
 public class DeviceAdapter extends BaseAdapter {
     private final List<EquesListInfo.bdylistEntity> bdylist;
     private final List<DeviceInfo> deviceInfos;
-    private final List<MyDeviceInfo>  ysInfos;
+    private final List<MyDeviceInfo> ysInfos;
     private final Context mcontext;
     private EquesListInfo.bdylistEntity bdylistEntity;
     private String onLinesBid;
     private String bid;
     private String name;
 
-    public DeviceAdapter(Context context, List<EquesListInfo.bdylistEntity> bdylist, List<DeviceInfo> deviceInfos,List<MyDeviceInfo> ysInfos) {
+    public DeviceAdapter(Context context, List<EquesListInfo.bdylistEntity> bdylist, List<DeviceInfo> deviceInfos, List<MyDeviceInfo> ysInfos) {
         this.mcontext = context;
         this.bdylist = bdylist;
         this.deviceInfos = deviceInfos;
-        this.ysInfos=ysInfos;
+        this.ysInfos = ysInfos;
     }
 
     @Override
     public int getCount() {
-        return deviceInfos.size() + bdylist.size()+ysInfos.size();
+        return deviceInfos.size() + bdylist.size() + ysInfos.size();
     }
-
 
 
     @Override
@@ -76,7 +78,7 @@ public class DeviceAdapter extends BaseAdapter {
         }
         holder.btn_lock_record_hint.setText(String.valueOf(0));
         holder.btn_lock_record_hint.setVisibility(View.GONE);
-        if (position < deviceInfos.size()&&deviceInfos.size()>0) {
+        if (position < deviceInfos.size() && deviceInfos.size() > 0) {
             DeviceInfo info = deviceInfos.get(position);
             holder.name.setText(info.getDeviceName());
             int status = info.getDeviceStatus();
@@ -191,10 +193,25 @@ public class DeviceAdapter extends BaseAdapter {
                 holder.iv_icon_scenario.setAlpha(0.4f);
             }
 
-        }else{
+        } else {
             //萤石
-            holder.name.setText("萤石猫眼");
-            holder.iv_icon_scenario.setImageResource(R.mipmap.eques_monitor);
+            if (ysInfos.get(position - deviceInfos.size() - bdylist.size()).getDeviceType().equals("WonlySmartEyeYs7")) {
+                holder.name.setText("萤石猫眼");
+            } else {
+                holder.name.setText("萤石摄像头");
+            }
+            if (ysInfos.get(position - deviceInfos.size() - bdylist.size()).getInfoState() == 0) {
+                holder.iv_icon_scenario.setImageResource(R.mipmap.eques_monitor);
+                holder.iv_icon_scenario.setAlpha(1f);
+            } else {
+                if(ysInfos.get(position - deviceInfos.size() - bdylist.size()).getInfoState()==1){
+                    holder.iv_icon_scenario.setImageResource(R.mipmap.eques_monitor);
+                    holder.iv_icon_scenario.setAlpha(1f);
+                }else{
+                    holder.iv_icon_scenario.setImageResource(R.mipmap.eques_monitor);
+                    holder.iv_icon_scenario.setAlpha(0.4f);
+                }
+            }
         }
         return convertView;
     }

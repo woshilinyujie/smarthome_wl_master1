@@ -12,6 +12,15 @@ public class MyDeviceInfo {
     private String supplier;//区分猫眼和飞比设备
     private String deviceType;//设备类型
     private String random;//ys验证码
+    private int infoState;
+
+    public void setInfoState(int infoState) {
+        this.infoState = infoState;
+    }
+
+    public int getInfoState() {
+        return infoState;
+    }
 
     public void setRandom(String random) {
         this.random = random;

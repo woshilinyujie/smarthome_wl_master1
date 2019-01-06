@@ -141,14 +141,14 @@ public class YsVideoActivity extends AppCompatActivity {
         Date date = new Date(Long.parseLong(time) * 1000);
         startTime.setTime(date);
         endTime.setTime(date);
-        String s = DateUtils.getInstance().dateFormat6(Long.parseLong(time) * 1000 - 1000);
+        String s = DateUtils.getInstance().dateFormat6(Long.parseLong(time) * 1000 - 10000);
         String s1 = DateUtils.getInstance().dateFormat6(Long.parseLong(time) * 1000 + 10000);
         String[] split = s.split(":");
         String[] split1 = s1.split(":");
 
-        startTime.set(Calendar.HOUR_OF_DAY, 0);
-        startTime.set(Calendar.MINUTE, 0);
-        startTime.set(Calendar.SECOND, 0);
+        startTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(split[0]));
+        startTime.set(Calendar.MINUTE, Integer.parseInt(split[0]));
+        startTime.set(Calendar.SECOND, Integer.parseInt(split[0]));
         endTime.set(Calendar.HOUR_OF_DAY, Integer.parseInt(split1[0]));
         endTime.set(Calendar.MINUTE, Integer.parseInt(split1[1]));
         endTime.set(Calendar.SECOND, Integer.parseInt(split1[2]));

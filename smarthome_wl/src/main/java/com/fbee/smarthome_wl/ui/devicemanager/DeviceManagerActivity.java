@@ -712,7 +712,11 @@ public class DeviceManagerActivity extends BaseActivity<SubUserInfoContract.Pres
             for(int x=0;x<device_list.size();x++){
                 if(device_list.get(x).getVendor_name().equals("ys7")){
                     MyDeviceInfo info = new MyDeviceInfo();
-                    info.setName("萤石猫眼");
+                    if(device_list.get(x).getType().equals("WonlyCameraYs7")){
+                        info.setName("萤石猫眼");
+                    }else{
+                        info.setName("萤石摄像头");
+                    }
                     info.setSupplier(FactoryType.FBEE);
                     info.setDeviceType(device_list.get(x).getType());
                     info.setId(device_list.get(x).getUuid());

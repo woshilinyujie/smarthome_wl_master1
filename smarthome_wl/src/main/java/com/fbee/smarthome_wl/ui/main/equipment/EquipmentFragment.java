@@ -80,6 +80,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.videogo.exception.BaseException;
 import com.videogo.exception.ExtraException;
+import com.videogo.openapi.EZOpenSDK;
+import com.videogo.openapi.bean.EZDeviceInfo;
 import com.videogo.util.ConnectionDetector;
 import com.videogo.util.LocalValidate;
 import com.videogo.util.Utils;
@@ -144,6 +146,7 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
     private LocalValidate mLocalValidate;
     private boolean mScanNow;
     private String result;
+    private MThread mThread = new MThread();
 
     @Nullable
     @Override
@@ -227,7 +230,8 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
         //飞比设备改名字
         receiveChangeDevicenameEvent();
 
-//        receiveYs();
+        //添加萤石
+        searchDevice();
         //刷新操作
         onRefresh();
     }
@@ -347,8 +351,8 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
 
                     } else {
                         Intent intent = new Intent(getActivity(), YsEyeActivity.class);
-                        intent.putExtra("uuid", ysInfos.get(position-bdylist.size()-deviceInfos.size()).getId());
-                        intent.putExtra("random",ysInfos.get(position-bdylist.size()-deviceInfos.size()).getRandom());
+                        intent.putExtra("uuid", ysInfos.get(position - bdylist.size() - deviceInfos.size()).getId());
+                        intent.putExtra("random", ysInfos.get(position - bdylist.size() - deviceInfos.size()).getRandom());
                         startActivity(intent);
                     }
                 }
@@ -484,7 +488,6 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
                         }
                         hideLoading();
                         devicesAdapter.notifyDataSetChanged();
-                        searchDevice();
                     }
                 });
         mCompositeSubscription.add(mSubscription01);
@@ -645,7 +648,7 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String event) {
-                        if(event.equals("ys")){
+                        if (event.equals("ys")) {
 
                             String[] split = result.split("\r");
                             String uuid = split[1];
@@ -892,7 +895,11 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
                     for (int x = 0; x < device_list.size(); x++) {
                         if (device_list.get(x).getVendor_name().equals("ys7")) {
                             MyDeviceInfo info = new MyDeviceInfo();
-                            info.setName("萤石猫眼");
+                            if (device_list.get(x).getType().equals("WonlySmartEyeYs7")) {
+                                info.setName("萤石猫眼");
+                            } else {
+                                info.setName("萤石摄像头");
+                            }
                             info.setSupplier(FactoryType.FBEE);
                             info.setDeviceType(device_list.get(x).getType());
                             info.setId(device_list.get(x).getUuid());
@@ -906,6 +913,7 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
 
             }
         }
+        mThread.start();
     }
 
     @Override
@@ -1016,90 +1024,6 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
         presenter.reqGateWayInfo(body);
     }
 
-    //萤石设备判断
-    public void ysJudgement(String resultString) {
-        // TODO 判断是否为探测器 1.5个字段 2.最后一个字段T或者K打头 且长度为4
-        if (goAddProbe(resultString)) {
-            return;
-        }
-        // 初始化数据
-        mSerialNoStr = "";
-        mSerialVeryCodeStr = "";
-        deviceType = "";
-        // CS-F1-1WPFR
-        // CS-A1-1WPFR
-        // CS-C1-1FPFR
-        // resultString = "www.xxx.com\n456654855\nABCDEF\nCS-C3-21PPFR\n";
-        // 字符集合
-        String[] newlineCharacterSet = {
-                "\n\r", "\r\n", "\r", "\n"};
-        String stringOrigin = resultString;
-        // 寻找第一次出现的位置
-        int a = -1;
-        int firstLength = 1;
-        for (String string : newlineCharacterSet) {
-            if (a == -1) {
-                a = resultString.indexOf(string);
-                if (a > stringOrigin.length() - 3) {
-                    a = -1;
-                }
-                if (a != -1) {
-                    firstLength = string.length();
-                }
-            }
-        }
-
-        // 扣去第一次出现回车的字符串后，剩余的是第二行以及以后的
-        if (a != -1) {
-            resultString = resultString.substring(a + firstLength);
-        }
-        // 寻找最后一次出现的位置
-        int b = -1;
-        for (String string : newlineCharacterSet) {
-            if (b == -1) {
-                b = resultString.indexOf(string);
-                if (b != -1) {
-                    mSerialNoStr = resultString.substring(0, b);
-                    firstLength = string.length();
-                }
-            }
-        }
-
-        // 寻找遗失的验证码阶段
-        if (mSerialNoStr != null && b != -1 && (b + firstLength) <= resultString.length()) {
-            resultString = resultString.substring(b + firstLength);
-        }
-
-        // 再次寻找回车键最后一次出现的位置
-        int c = -1;
-        for (String string : newlineCharacterSet) {
-            if (c == -1) {
-                c = resultString.indexOf(string);
-                if (c != -1) {
-                    mSerialVeryCodeStr = resultString.substring(0, c);
-                }
-            }
-        }
-
-        // 寻找CS-C2-21WPFR 判断是否支持wifi
-        if (mSerialNoStr != null && c != -1 && (c + firstLength) <= resultString.length()) {
-            resultString = resultString.substring(c + firstLength);
-        }
-        if (resultString != null && resultString.length() > 0) {
-            deviceType = resultString;
-        }
-
-        if (b == -1) {
-            mSerialNoStr = resultString;
-        }
-
-        if (mSerialNoStr == null) {
-            mSerialNoStr = stringOrigin;
-        }
-        // 判断是不是9位
-        isValidate();
-    }
-
 
     /**
      * 跳转添加探测器页面
@@ -1143,5 +1067,35 @@ public class EquipmentFragment extends BaseFragment<AddOrDelDevicesToSeverContra
         mScanNow = false;
     }
 
+
+    class MThread extends Thread {
+        private Thread t;
+
+        public void run() {
+            if (ysInfos.size() > 0) {
+                for (int x = 0; x < ysInfos.size(); x++) {
+                    try {
+                        EZDeviceInfo deviceInfo = EZOpenSDK.getInstance().getDeviceInfo(ysInfos.get(x).getId());
+                        ysInfos.get(x).setInfoState(deviceInfo.getStatus());
+                    } catch (BaseException e) {
+                        e.printStackTrace();
+                    }
+                }
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        devicesAdapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        }
+
+        public void start() {
+            if (t == null) {
+                t = new Thread(this, "Thread-1");
+                t.start();
+            }
+        }
+    }
 
 }

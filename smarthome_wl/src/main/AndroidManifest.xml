@@ -363,6 +363,11 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape">
         </activity>
+        <activity
+            android:name=".ui.YsSetting.YsSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape">
+        </activity>
 
 
     </application>

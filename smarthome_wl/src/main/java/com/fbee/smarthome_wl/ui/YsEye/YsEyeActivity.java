@@ -46,6 +46,7 @@ public class YsEyeActivity extends BaseActivity {
     private String random;
     private String uuid;
     private ImageView ys_iv_visitor;
+    private ImageView ys_btn_configure;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +59,10 @@ public class YsEyeActivity extends BaseActivity {
     protected void initView() {
         ys_video_view = (ImageView) findViewById(R.id.ys_video_view);
         ys_iv_visitor = (ImageView) findViewById(R.id.ys_iv_visitor);
+        ys_btn_configure = (ImageView) findViewById(R.id.ys_btn_configure);
         ys_video_view.setOnClickListener(this);
         ys_iv_visitor.setOnClickListener(this);
+        ys_btn_configure.setOnClickListener(this);
     }
 
     @Override
@@ -70,17 +73,17 @@ public class YsEyeActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.ys_video_view:
-                Intent intent=new Intent(this, YsplayActivity.class);
-                intent.putExtra("uuid",uuid);
-                intent.putExtra("random",random);
+                Intent intent = new Intent(this, YsplayActivity.class);
+                intent.putExtra("uuid", uuid);
+                intent.putExtra("random", random);
                 startActivity(intent);
                 break;
             case R.id.ys_iv_visitor:
-                Intent intent1=new Intent(this, YsReportActivity.class);
-                intent1.putExtra("uuid",uuid);
-                intent1.putExtra("random",random);
+                Intent intent1 = new Intent(this, YsReportActivity.class);
+                intent1.putExtra("uuid", uuid);
+                intent1.putExtra("random", random);
                 startActivity(intent1);
                 break;
         }

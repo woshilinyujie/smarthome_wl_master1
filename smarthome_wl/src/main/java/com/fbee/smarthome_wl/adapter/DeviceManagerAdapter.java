@@ -61,6 +61,8 @@ public class DeviceManagerAdapter extends BaseAdapter {
         }else if(FactoryType.FBEE.equals(info.getSupplier())){
             if(info.getDeviceType().equals("WonlySmartEyeYs7")){
                 holder.tvImage.setImageResource(R.mipmap.eques_monitor);
+            }else if(info.getDeviceType().equals("WonlyCameraYs7")){
+                holder.tvImage.setImageResource(R.mipmap.item_visitor);
             }else{
                 switch (Integer.parseInt(info.getDeviceType())){
                     //门锁
